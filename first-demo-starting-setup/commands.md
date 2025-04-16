@@ -4,4 +4,4 @@ docker run node
 docker ps -a
 docker run node
 docker ps -a
-docker rus -it node
+docker rus -it node 

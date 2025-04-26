@@ -74,3 +74,23 @@ docker ps
 docker ps --help
 docker ps --help
 docker run
+
+docker ps
+docker ps -a
+
+docker rm
+docker stop
+docker rm
+docker stop
+docker ps
+docker stop 
+docker rm <names>
+docker images
+docker rmi 
+docker rmi
+docker images
+docker images
+doker image prune
+docker prune image
+docker image inspect imageid
+docker image inspect imageid

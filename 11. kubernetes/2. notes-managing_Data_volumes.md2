@@ -1,0 +1,61 @@
+managing the storage and data in the kubernetes:
+    vlumes : regular volumes and persistant volumes + claims
+    enviroonment variables
+
+NODE API application
+    docker-compose up -d  --build
+    docker-compose down
+    docker container prune
+    docker compose up
+    docker-compose down
+
+
+kubernetes and volumes
+    state: data -> created and used by app 
+        user generated data : in DB or in files
+        immediate res : in temp mem or in memeory
+    vokumes -> for persistant state
+    kubernetes -> 
+        runs our containers not us
+        cannot have docker compose file
+        K needs to configure the volumes
+        it can mount volumes into container
+        pods
+    volumes supported
+        local volumes
+        cloud-rovider specifiv columes
+    volume -> lifetime -> depends on the pod lifetime
+        survives container restarts and removal
+        volumes are removed, when pods are destroyed
+    kubernetes vol vs docker volumes
+        k -> driver types
+        d -> no
+        k - not persistent
+        d - persistant until mannually cleared
+    
+deployment and deployments
+    kubectl get deployments
+    service.yaml
+    deployment.yaml;
+        apiVersion: apps/v1
+        kind: Deployment
+        metadata:
+            name:story-deployment
+        spec:
+            replicas: 1
+            selectorr:
+                matchLabels:
+                    app:story
+            template: 
+            metadata:
+                labels:
+                    app: story
+                spec:
+                    containers:
+                        - name: story
+                            image: dhubreponame/name
+
+        
+    
+
+
